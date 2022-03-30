@@ -19,7 +19,7 @@ def setup(hass, config):
     # 如果没有配置则不运行
     if DOMAIN not in config or DOMAIN in hass.data:
         return True
-    api = ApiConfig(hass.config.path('./.shaonianzhentan'))
+    api = ApiConfig(hass.config.path('./.storage/.shaonianzhentan'))
     api.api_sidebar = ApiSidebar(hass)
     hass.data[DOMAIN] = api
 
